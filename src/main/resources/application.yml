@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Questions-Service
+  datasource:
+    url: jdbc:mysql://quizzywhiz.cx0se2s68fx3.ap-south-1.rds.amazonaws.com:3306/questions
+    password: password
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
